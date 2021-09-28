@@ -25,6 +25,12 @@ export const ContextProvider = ({ children }: ContextProviderProp) => {
       payload: { id },
     });
   };
+  const removeTodo = (id: number) => {
+    dispatch({
+      type: todoType.REMOVE_TODO,
+      payload: { id },
+    });
+  };
   const addTodo = (todo: Todo) => {
     dispatch({
       type: todoType.ADD_TODO,
@@ -39,6 +45,7 @@ export const ContextProvider = ({ children }: ContextProviderProp) => {
         todoState: stateTodo,
         addTodo,
         toggleTodo,
+        removeTodo,
       }}
     >
       {children}

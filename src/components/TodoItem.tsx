@@ -4,7 +4,7 @@ interface TodoItemProps {
   todo: Todo;
 }
 export const TodoItem = ({ todo }: TodoItemProps) => {
-  const { toggleTodo } = useGetTodos();
+  const { toggleTodo, removeTodo } = useGetTodos();
   return (
     <ul>
       <li
@@ -20,6 +20,7 @@ export const TodoItem = ({ todo }: TodoItemProps) => {
         <br />
         Terminado: {todo.done ? "Si" : "No"}
       </li>
+      <button onClick={() => removeTodo(todo.id)}>Eliminar ToDo</button>
     </ul>
   );
 };

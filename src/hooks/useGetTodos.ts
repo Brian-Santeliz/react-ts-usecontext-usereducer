@@ -5,11 +5,13 @@ export const useGetTodos = () => {
     todoState: { todos },
     toggleTodo,
     addTodo,
+    removeTodo
   } = useContext(todoContext);
   return {
     todos,
     pending: todos.filter((todo) => !todo.done).length,
     toggleTodo,
     addTodo,
+    removeTodo
   };
 };
