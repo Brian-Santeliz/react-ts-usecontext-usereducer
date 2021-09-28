@@ -1,8 +1,8 @@
 import { createContext } from "react";
-import { Todo } from "../interfaces";
+import { Todo,TodoState } from "../interfaces";
 
 type ContextType = {
-  todo: Todo[];
+  todoState: TodoState;
   toggleTodo: (id: number) => void;
   addTodo: (todo: Todo) => void;
 };

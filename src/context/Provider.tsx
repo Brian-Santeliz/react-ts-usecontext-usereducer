@@ -36,7 +36,7 @@ export const ContextProvider = ({ children }: ContextProviderProp) => {
   return (
     <todoContext.Provider
       value={{
-        todo: [],
+        todoState: stateTodo,
         addTodo,
         toggleTodo,
       }}
