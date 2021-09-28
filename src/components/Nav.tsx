@@ -1,8 +1,11 @@
+import { useGetTodos } from "../hooks/useGetTodos"
 
 const Nav = () => {
+const {pending} =  useGetTodos()
     return (
         <div>
-            Hello from nav
+           ToDo List Typescript React
+            <p>ToDo pending : {pending} </p>
         </div>
     )
 }

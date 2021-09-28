@@ -8,7 +8,7 @@ export const useGetTodos = () => {
   } = useContext(todoContext);
   return {
     todos,
-    pending: todos.filter((todo) => !todo.done),
+    pending: todos.filter((todo) => !todo.done).length,
     toggleTodo,
     addTodo,
   };
