@@ -16,6 +16,7 @@ const INITIAL_STATE: TodoState = {
     },
   ],
   pending: 1,
+  completed: 0,
 };
 export const ContextProvider = ({ children }: ContextProviderProp) => {
   const [stateTodo, dispatch] = useReducer(todoReducer, INITIAL_STATE);

@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { useGetTodos } from "../hooks/useGetTodos";
 import { TodoItem } from "./TodoItem";
-import {Todo as TodoInterface} from '../interfaces'
 export const Todo = () => {
   const { todos, addTodo } = useGetTodos();
-  const [todo, setTodo] = useState<TodoInterface>({
+  interface TodoStateHook {
+    name: string;
+    description: string;
+    done: boolean;
+  }
+  const [todo, setTodo] = useState<TodoStateHook>({
     name: "",
     description: "",
     done: false,

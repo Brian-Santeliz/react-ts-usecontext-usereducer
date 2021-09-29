@@ -10,6 +10,7 @@ export const useGetTodos = () => {
   return {
     todos,
     pending: todos.filter((todo) => !todo.done).length,
+    completed: todos.filter((todo) => todo.done).length,
     toggleTodo,
     addTodo,
     removeTodo
